@@ -1,11 +1,11 @@
 package com.entertainment2.entertainment2.model;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
-
+@Entity
 @Data
 public class Booking {
+    @Id
     private long id;
     private String customerName;
     private Integer numberOfTickets;

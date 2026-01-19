@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class BookingServiceImpl implements BookingService {
     @Autowired
     BookingRepo bookingRepo;
@@ -20,6 +20,11 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public List<Booking> getAllBookings() {
+        return List.of();
+    }
+
+    @Override
+    public List<Booking> getBookingsByShowTimeId(Long showTimeId) {
         return List.of();
     }
 }

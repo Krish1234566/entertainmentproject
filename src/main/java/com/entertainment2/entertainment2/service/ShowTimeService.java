@@ -14,4 +14,6 @@ public interface ShowTimeService {
     List<ShowTime> getShowTimesByTheatre(Long theatreId);
 
     List<ShowTime> getAllShowTimes();
+
+    List<ShowTime> getShowTimesByBookingId(Long bookingId);
 }

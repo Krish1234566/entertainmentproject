@@ -4,12 +4,12 @@ import com.entertainment2.entertainment2.model.Booking;
 import com.entertainment2.entertainment2.service.BookingService;
 import com.entertainment2.entertainment2.serviceimpl.BookingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/api/Booking")
 public class BookingController {
 
     @Autowired
@@ -22,6 +22,12 @@ public class BookingController {
     @GetMapping
     public List<Booking> getAllBookings() {
         return bookingService.getAllBookings();
+    }
+
+    // READ BY ShowTime ID - GET /api/bookings/showtime/{showTimeId}
+    @GetMapping("/showtime/{showTimeId}")
+    public List<Booking> getBookingsByShowTime(@PathVariable Long showTimeId) {
+        return bookingService.getBookingsByShowTimeId(showTimeId);
     }
 }
 

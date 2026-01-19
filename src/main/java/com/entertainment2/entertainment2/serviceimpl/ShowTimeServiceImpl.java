@@ -46,4 +46,9 @@ public class ShowTimeServiceImpl implements ShowTimeService {
     public List<ShowTime> getAllShowTimes() {
         return List.of();
     }
+
+    @Override
+    public List<ShowTime> getShowTimesByBookingId(Long bookingId) {
+        return List.of();
+    }
 }

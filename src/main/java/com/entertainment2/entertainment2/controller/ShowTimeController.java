@@ -23,20 +23,21 @@ public class ShowTimeController {
     }
 
 
-    @GetMapping("/movieById")
+    @GetMapping("/movie/{movieId}")
     public List<ShowTime> getShowTimesByMovie(@PathVariable Long movieId) {
         return showTimeService.getShowTimesByMovie(movieId);
     }
 
 
-    @GetMapping("/theatreById")
+    @GetMapping("/theatre/{theatreId}")
     public List<ShowTime> getShowTimesByTheatre(@PathVariable Long theatreId) {
         return showTimeService.getShowTimesByTheatre(theatreId);
     }
 
 
-   /* @GetMapping
-    public List<ShowTime> getAllShowTimes() {
-        return showTimeService.getAllShowTimes();
-    }*/
+    // READ by Booking ID - NEW ENDPOINT
+    @GetMapping("/booking/{bookingId}")
+    public List<ShowTime> getShowTimesByBooking(@PathVariable Long bookingId) {
+        return showTimeService.getShowTimesByBookingId(bookingId);
+    }
 }

@@ -11,7 +11,7 @@ public interface MovieService {
 
 
 
-    Movie addNewMovie(Movie movie);
+
 
     Optional<Object> getMovieById(Long id);
 

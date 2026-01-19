@@ -17,13 +17,17 @@ import java.util.Optional;
 public class MovieController {
     @Autowired
     MovieService movieService;
-    @PostMapping("/add")
+
+
+    @PostMapping("/addMovie")
+
+
     public Movie addMovie(@RequestBody Movie movie) {
         return movieService.addMovie(movie);
 
     }
 
-    @GetMapping
+    @GetMapping("/getAllMovies")
         List<Movie> getAllMovies() {
             return Collections.singletonList(movieService.getAllMovies());
         }

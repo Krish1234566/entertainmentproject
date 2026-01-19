@@ -9,4 +9,6 @@ public interface BookingService {
     Booking createBooking(Booking booking);
 
     List<Booking> getAllBookings();
+
+    List<Booking> getBookingsByShowTimeId(Long showTimeId);
 }

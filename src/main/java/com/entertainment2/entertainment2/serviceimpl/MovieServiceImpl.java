@@ -20,11 +20,6 @@ public class MovieServiceImpl implements MovieService {
     }
 
 
-    @Override
-    public Movie addNewMovie(Movie movie) {
-        return null;
-    }
-
 
     @Override
     public Optional<Object> getMovieById(Long id) {
