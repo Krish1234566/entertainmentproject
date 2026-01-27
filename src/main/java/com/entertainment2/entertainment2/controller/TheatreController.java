@@ -14,6 +14,7 @@ public class TheatreController {
     @Autowired
     TheatreService theatreService;
 
+
     @PostMapping("/addTheatre")
     public Theatre addTheatre(@RequestBody Theatre theatre){
         return theatreService.addTheatre(theatre);

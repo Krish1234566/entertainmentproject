@@ -14,4 +14,9 @@ public interface ShowTimeRepo extends JpaRepository<ShowTime,Long>{
     public List<ShowTime> getShows(@Param("id") Long id );
 
 
+   List<ShowTime> findByMovieId(Long movieId);
+
+    List<ShowTime> findByTheatreId(Long theatreId);
+
+
 }

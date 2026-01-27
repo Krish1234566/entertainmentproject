@@ -1,6 +1,7 @@
 package com.entertainment2.entertainment2.service;
 
 import com.entertainment2.entertainment2.model.Theatre;
+import com.entertainment2.entertainment2.model.TheatreSeat;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface TheatreService {
     Theatre updateTheatre(Long id, Theatre theatre);
 
     void deleteTheatre(Long id);
+
+
 }

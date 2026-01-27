@@ -6,6 +6,7 @@ import com.entertainment2.entertainment2.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,8 +33,9 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public Movie getAllMovies() {
-        return null;
+    public List<Movie> getAllMovies() {
+        return movieRepo.findAll();
+
     }
 
     @Override

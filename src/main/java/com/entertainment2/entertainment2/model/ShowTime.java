@@ -24,5 +24,7 @@ public class ShowTime {
     @ManyToOne
     @JoinColumn(name = "theatre_id")
     private Theatre theatre;
+
+
 }
 

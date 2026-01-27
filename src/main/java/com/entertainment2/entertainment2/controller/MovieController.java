@@ -26,10 +26,9 @@ public class MovieController {
         return movieService.addMovie(movie);
 
     }
-
-    @GetMapping("/getAllMovies")
-        List<Movie> getAllMovies() {
-            return Collections.singletonList(movieService.getAllMovies());
+    @GetMapping("/getAll")
+    public List<Movie> getAllMovies() {
+        return movieService.getAllMovies();
         }
 
         @GetMapping("/{id}")

@@ -9,17 +9,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/ShowTime")
+
 public class ShowTimeController {
     @Autowired
     ShowTimeService showTimeService;
 
-    @PostMapping("/addShow")
+    @PostMapping("/addShowTime")
     public ShowTime addShowTime(@RequestBody ShowTime showTime){
         return showTimeService.addShowTime(showTime);
     }
-    @GetMapping("/getShow")
-    public List<ShowTime> getShow(@RequestParam("id") Long id){
+    @GetMapping("/getShowTime")
+    public List<ShowTime> getShowTime(@RequestParam("id") Long id){
         return  showTimeService.getShowTime(id);
+    }
+    @GetMapping("/getAllShowTimes")
+    public List<ShowTime> getAllShowTimes() {
+        return showTimeService.getAllShowTimes();
     }
 
 
@@ -35,9 +41,4 @@ public class ShowTimeController {
     }
 
 
-    // READ by Booking ID - NEW ENDPOINT
-    @GetMapping("/booking/{bookingId}")
-    public List<ShowTime> getShowTimesByBooking(@PathVariable Long bookingId) {
-        return showTimeService.getShowTimesByBookingId(bookingId);
-    }
 }

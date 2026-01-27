@@ -19,7 +19,8 @@ public class BookingController {
     public Booking createBooking(@RequestBody Booking booking) {
         return bookingService.createBooking(booking);
     }
-    @GetMapping
+
+    @GetMapping ("/showAllBooking")
     public List<Booking> getAllBookings() {
         return bookingService.getAllBookings();
     }

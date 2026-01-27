@@ -23,7 +23,7 @@ public class ShowTimeServiceImpl implements ShowTimeService {
                return new ShowTime();
            }
        }catch (Exception e){
-           throw new RuntimeException("something occured "+ e.getMessage());
+           throw new RuntimeException("something occurred "+ e.getMessage());
        }
     }
 
@@ -34,21 +34,18 @@ public class ShowTimeServiceImpl implements ShowTimeService {
 
     @Override
     public List<ShowTime> getShowTimesByMovie(Long movieId) {
-        return List.of();
+        return showTimeRepo.findByMovieId(movieId);
     }
 
     @Override
     public List<ShowTime> getShowTimesByTheatre(Long theatreId) {
-        return List.of();
+        return showTimeRepo.findByTheatreId(theatreId);
     }
+
+
 
     @Override
     public List<ShowTime> getAllShowTimes() {
-        return List.of();
-    }
-
-    @Override
-    public List<ShowTime> getShowTimesByBookingId(Long bookingId) {
-        return List.of();
+        return  showTimeRepo.findAll();
     }
 }

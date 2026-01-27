@@ -1,6 +1,7 @@
 package com.entertainment2.entertainment2.serviceimpl;
 
 import com.entertainment2.entertainment2.model.Theatre;
+import com.entertainment2.entertainment2.model.TheatreSeat;
 import com.entertainment2.entertainment2.repository.TheatreRepo;
 import com.entertainment2.entertainment2.service.TheatreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class TheatreServiceImpl implements TheatreService {
 
     @Override
     public List<Theatre> getAllTheatres() {
-        return List.of();
+         return theatreRepo.findAll();
     }
 
     @Override
@@ -37,5 +38,6 @@ public class TheatreServiceImpl implements TheatreService {
     public void deleteTheatre(Long id) {
 
     }
+
 
 }
